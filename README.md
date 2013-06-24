@@ -35,12 +35,9 @@ manage/tops/show で更新情報を表示する場合、以下のようにする
 
     # shell
     $ git clone $UPDATES_REPO $RAILS_ROOT/updates
-
-    # asset pipeline に画像を置く場合
-    $ cd app/assets/images/manage/; ln -s ../../../../updates/images updates
-
-    # public に画像を置く場合
     $ cd public/manage/images; ln -s ../../updates/images updates
+
+assets はシンボリックリンクにすると precompile で失敗するので public の下にリンクをつくる
 
 `$UPDATES_REPO` には、更新情報が以下のルールで保存されていること
 
