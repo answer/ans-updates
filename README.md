@@ -53,7 +53,7 @@ assets はシンボリックリンクにすると precompile で失敗するの�
 
 ## オーバーライド可能な設定とデフォルト
 
-    # app/views/ans-updates/show.html.erb
+    # app/views/ans-updates/_show_update.html.erb
     <section class="well" id="<%= id %>">
       <% if date %><small class="muted pull-right">- <%= updates_date date %> -</small><% end %>
       <%= updates_content content %>
