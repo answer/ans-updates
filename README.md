@@ -69,8 +69,8 @@ manage/tops/show で更新情報を表示する場合、以下のようにする
       config.changelog_suffix       = ".md"            # 更新ログの拡張子
       config.changelog_date_pattern = /(\d+-\d+-\d+)/  # 更新ログファイルに含まれる日付のパターン
 
-      config.limit       = 20                        # 更新情報を表示する数
-      config.date_format = "%Y/%m/%d"                # 日付のフォーマット
+      config.limit       = 20         # 更新情報を表示する数
+      config.date_format = "%Y/%m/%d" # 日付のフォーマット
     end
 
 デフォルトのテンプレートは bootstrap 用に作成したもの
