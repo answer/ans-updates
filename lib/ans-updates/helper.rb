@@ -5,12 +5,14 @@ module Ans::Updates
     include CommonHelper
 
     def updates_show
-      Dir[updates_changelog_pattern].sort.reverse[0..(config.limit-1)].map{|path|
-        render config.template_name,
+      Dir[updates_changelog_pattern].sort.reverse[0..(config.limit-1)].map do |path|
+        render(
+          config.template_name,
           id:      updates_changelog_id(path),
           date:    updates_changelog_date(path),
           content: File.read(path),
-      }.join("").html_safe
+        )
+      end.join("").html_safe
     end
 
     def updates_changelog_pattern
