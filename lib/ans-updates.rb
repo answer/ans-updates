@@ -19,6 +19,7 @@ module Ans
     end
 
     autoload :Helper,       "ans-updates/helper.rb"
+    autoload :SpecHelper,   "ans-updates/spec_helper.rb"
     autoload :CommonHelper, "ans-updates/common_helper.rb"
 
     def self.included(m)
