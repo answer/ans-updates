@@ -1,2 +1,2 @@
 #!/bin/sh
-bundle rake release
+bundle exec rake release
